@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cypress Bug</title>
+</head>
+<body>
+
+<h1>Cypress Bug Playground</h1>
+
+<button id="test">Click Me!</button>
+
+<script type="text/javascript">
+
+  document.getElementById("test").addEventListener("click", (event) => {
+
+    const request = new XMLHttpRequest();
+    request.open("PUT", "http://localhost:3001/");
+    request.addEventListener("load", () => {
+
+      document.write('Redirected response: ', request.responseText)
+    });
+    const big = new File([Array(100000000)], 'big.txt');
+    request.send(big);
+
+
+  }, false);
+
+</script>
+
+</body>
+</html>
