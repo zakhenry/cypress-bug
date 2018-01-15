@@ -2,17 +2,27 @@
   "name": "cypress-bug",
   "version": "1.0.0",
   "description": "",
-  "main": "./server/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
-    "start": "node ./server/index.js",
-    "cypress": "cypress open"
+    "start": "gulp && http-server dist",
+    "build": "gulp",
+    "cypress": "cypress run"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^1.1.1"
+    "cypress": "^1.4.1",
+    "browserify": "^14.4.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.4.0",
+    "gulp-typescript": "^3.2.2",
+    "http-server": "^0.10.0",
+    "tsify": "^3.0.3",
+    "typescript": "^2.5.2",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "babylonjs": "^3.2.0-alpha2",
     "express": "^4.16.2"
   }
 }
