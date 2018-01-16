@@ -10,7 +10,7 @@ test:
   script:
     - npm cache clean -f
     - npm install --unsafe-perm
-    - npm start &
+    - npm run build
     - npm run cy:run -- --browser chrome
   artifacts:
     paths:

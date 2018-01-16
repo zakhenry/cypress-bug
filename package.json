@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "start": "gulp && http-server dist -c-1",
+    "start": "npm run build && http-server dist -c-1",
     "build": "gulp",
     "cy:run": "cypress run",
     "cy:open": "cypress open"
