@@ -1,0 +1,19 @@
+stages:
+  - test
+
+image: cypress/browsers:chrome63-ff57
+
+test:
+  stage: test
+  variables:
+    DEBUG: cypress:*
+  script:
+    - npm cache clean -f
+    - npm install --unsafe-perm
+    - npm run build.prod
+    - npm start &
+    - npm run cypress -- --browser chrome
+  artifacts:
+    paths:
+      - cypress/screenshots/
+      - cypress/videos/
