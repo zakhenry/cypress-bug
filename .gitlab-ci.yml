@@ -10,7 +10,6 @@ test:
   script:
     - npm cache clean -f
     - npm install --unsafe-perm
-    - npm run build.prod
     - npm start &
     - npm run cypress -- --browser chrome
   artifacts:
