@@ -2,7 +2,7 @@ describe('Test bug', () => {
 
   it('should not have errors', () => {
 
-    cy.visit('./dist/index.html');
+    cy.visit('http://localhost:8000');
 
     cy.wait(5000);
 

@@ -11,8 +11,10 @@ test:
     - npm cache clean -f
     - npm install --unsafe-perm
     - npm run build
+    - npm run serve &
     - npm run cy:run -- --browser chrome
   artifacts:
+    expire_in: 1 week
     paths:
       - cypress/screenshots/
       - cypress/videos/

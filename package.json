@@ -4,8 +4,9 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "start": "npm run build && http-server dist -c-1",
+    "start": "npm run build && npm run serve",
     "build": "gulp",
+    "serve": "http-server dist -c-1 -p 8000 && echo 'serving at http://localhost:8000'",
     "cy:run": "cypress run",
     "cy:open": "cypress open"
   },
