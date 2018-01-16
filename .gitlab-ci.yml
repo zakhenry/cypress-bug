@@ -12,7 +12,7 @@ test:
     - npm install --unsafe-perm
     - npm run build
     - npm run serve &
-    - npm run cy:run -- --browser chrome
+    - npm run cy:run
   artifacts:
     expire_in: 1 week
     paths:
